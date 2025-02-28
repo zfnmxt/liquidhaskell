@@ -74,6 +74,7 @@ library
                       Data.ByteString.Unsafe_LHAssumptions
 
                       Data.Set_LHAssumptions
+                      Array.Partition2
 
   hs-source-dirs:     src
 
