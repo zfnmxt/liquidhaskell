@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -fplugin=LiquidHaskell #-}
 
-module Array.Partition2 where
+module ArrayProps.Partition2 where
 
 {-@ inc :: {v:Int | v >= 0} -> {v:Int | v >= 0} @-}
 inc :: Int -> Int
