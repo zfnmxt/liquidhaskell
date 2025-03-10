@@ -103,15 +103,11 @@ index (_:xs) i = index xs (i - 1)
 indsFLam :: Int -> Int -> Int
 indsFLam lst t = t + lst
 
--- Remove: {-@ mapLam :: (Bool, Nat, Nat) -> Int @-}
--- 
 {-@ reflect mapLam @-}
 mapLam :: (Bool, Int, Int) -> Int
 mapLam (True, indT, _)  = indT - 1
 mapLam (False, _, indF) = indF - 1
 
--- Remove: {-@ almost_part2Indices :: cs : [Bool] -> [(Bool, Nat, Nat)] @-}
---
 {-@ reflect almost_part2Indices @-}
 almost_part2Indices :: [Bool] -> [(Bool, Int, Int)]
 almost_part2Indices cs =
@@ -130,7 +126,6 @@ part2Indices cs =
   in map mapLam res
 
 {-@ reflect p @-}
-{-@ p :: (Bool, Nat, Nat) -> {v : Bool | v == True} @-}
 p :: (Bool, Int, Int) -> Bool
 p (True, t, f) = t >= 0
 p (False, t, f) = f >= 0
